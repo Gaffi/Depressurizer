@@ -699,8 +699,8 @@ namespace Depressurizer
             if ((notInDbCount > 0 || oldDbDataCount > 0) && scrape && scrapeJobs.Count > 0)
             {
                 Cursor.Current = Cursors.Default;
-                string message = "";
-                message += notInDbCount > 0 ? string.Format(CultureInfo.CurrentCulture, GlobalStrings.MainForm_GamesNotFoundInGameDB, notInDbCount) : "";
+                string message = string.Empty;
+                message += notInDbCount > 0 ? string.Format(CultureInfo.CurrentCulture, GlobalStrings.MainForm_GamesNotFoundInGameDB, notInDbCount) : string.Empty;
                 if (notInDbCount > 0 && oldDbDataCount > 0)
                 {
                     message += " " + GlobalStrings.Text_And + " ";
@@ -3673,7 +3673,7 @@ namespace Depressurizer
             cboFilter.DataSource = CurrentProfile.GameData.Filters;
             cboFilter.ValueMember = null;
             cboFilter.DisplayMember = "Name";
-            cboFilter.Text = "";
+            cboFilter.Text = string.Empty;
         }
 
         /// <summary>
@@ -3737,7 +3737,7 @@ namespace Depressurizer
                 return;
             }
 
-            if (MessageBox.Show(string.Format(CultureInfo.CurrentCulture, GlobalStrings.MainForm_RemoveGame, selectCount, selectCount == 1 ? "" : "s"), GlobalStrings.DBEditDlg_Confirm, MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
+            if (MessageBox.Show(string.Format(CultureInfo.CurrentCulture, GlobalStrings.MainForm_RemoveGame, selectCount, selectCount == 1 ? string.Empty : "s"), GlobalStrings.DBEditDlg_Confirm, MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
             {
                 return;
             }
@@ -3766,13 +3766,13 @@ namespace Depressurizer
 
             if (removed > 0)
             {
-                AddStatus(string.Format(CultureInfo.CurrentCulture, GlobalStrings.MainForm_RemovedGame, removed, removed == 1 ? "" : "s"));
+                AddStatus(string.Format(CultureInfo.CurrentCulture, GlobalStrings.MainForm_RemovedGame, removed, removed == 1 ? string.Empty : "s"));
                 MakeChange(true);
             }
 
             if (ignored > 0)
             {
-                AddStatus(string.Format(CultureInfo.CurrentCulture, GlobalStrings.MainForm_IgnoredGame, ignored, ignored == 1 ? "" : "s"));
+                AddStatus(string.Format(CultureInfo.CurrentCulture, GlobalStrings.MainForm_IgnoredGame, ignored, ignored == 1 ? string.Empty : "s"));
                 MakeChange(true);
             }
 

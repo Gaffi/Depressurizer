@@ -291,7 +291,7 @@ namespace Depressurizer
                 return ifEmpty;
             }
 
-            string result = "";
+            string result = string.Empty;
             bool first = true;
             foreach (Category category in Categories)
             {

@@ -52,7 +52,7 @@ namespace Depressurizer
         {
             if (File.Exists(((ComboItem) cboRestore.SelectedItem).Path))
             {
-                rtbRestore.Text = "";
+                rtbRestore.Text = string.Empty;
                 string path = ((ComboItem) cboRestore.SelectedItem).Path;
                 rtbRestore.Text = File.ReadAllText(path);
                 DateTime dt = File.GetLastWriteTime(path);

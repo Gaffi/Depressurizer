@@ -588,17 +588,17 @@ namespace Depressurizer.Core.Models
                         continue; //Some store pages on steam are bugged.
                     }
 
-                    if (WebUtility.HtmlDecode(ma.Groups[2].Value.Trim()) != "") //Interface
+                    if (WebUtility.HtmlDecode(ma.Groups[2].Value.Trim()) != string.Empty) //Interface
                     {
                         LanguageSupport.Interface.Add(language);
                     }
 
-                    if (WebUtility.HtmlDecode(ma.Groups[3].Value.Trim()) != "") //Full Audio
+                    if (WebUtility.HtmlDecode(ma.Groups[3].Value.Trim()) != string.Empty) //Full Audio
                     {
                         LanguageSupport.FullAudio.Add(language);
                     }
 
-                    if (WebUtility.HtmlDecode(ma.Groups[4].Value.Trim()) != "") //Subtitles
+                    if (WebUtility.HtmlDecode(ma.Groups[4].Value.Trim()) != string.Empty) //Subtitles
                     {
                         LanguageSupport.Subtitles.Add(language);
                     }

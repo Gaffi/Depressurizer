@@ -91,7 +91,7 @@ namespace Depressurizer
             {
                 txtId.Text = Game.AppId.ToString(CultureInfo.CurrentCulture);
 
-                txtParent.Text = Game.ParentId < 0 ? "" : Game.ParentId.ToString(CultureInfo.CurrentCulture);
+                txtParent.Text = Game.ParentId < 0 ? string.Empty : Game.ParentId.ToString(CultureInfo.CurrentCulture);
 
                 cmbType.SelectedItem = Game.AppType;
 

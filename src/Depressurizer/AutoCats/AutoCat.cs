@@ -300,7 +300,7 @@ namespace Depressurizer.AutoCats
         {
             XmlSerializer x = new XmlSerializer(GetType());
             XmlSerializerNamespaces nameSpace = new XmlSerializerNamespaces();
-            nameSpace.Add("", "");
+            nameSpace.Add(string.Empty, string.Empty);
             x.Serialize(writer, this, nameSpace);
         }
 

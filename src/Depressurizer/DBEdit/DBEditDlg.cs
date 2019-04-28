@@ -92,11 +92,11 @@ namespace Depressurizer
             {
                 entry.AppId.ToString(CultureInfo.CurrentCulture),
                 entry.Name,
-                entry.Genres != null ? string.Join(",", entry.Genres) : "",
+                entry.Genres != null ? string.Join(",", entry.Genres) : string.Empty,
                 entry.AppType.ToString(),
-                entry.LastStoreScrape == 0 ? "" : "X",
-                entry.LastAppInfoUpdate == 0 ? "" : "X",
-                entry.ParentId <= 0 ? "" : entry.ParentId.ToString(CultureInfo.CurrentCulture)
+                entry.LastStoreScrape == 0 ? string.Empty : "X",
+                entry.LastAppInfoUpdate == 0 ? string.Empty : "X",
+                entry.ParentId <= 0 ? string.Empty : entry.ParentId.ToString(CultureInfo.CurrentCulture)
             });
         }
 

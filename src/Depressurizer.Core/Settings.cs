@@ -244,7 +244,7 @@ namespace Depressurizer.Core
         /// </summary>
         public InterfaceLanguage InterfaceLanguage { get; set; } = InterfaceLanguage.English;
 
-        public string LstGamesState { get; set; } = "";
+        public string LstGamesState { get; set; } = string.Empty;
 
         public string ProfileToLoad { get; set; }
 

@@ -53,7 +53,7 @@ namespace Depressurizer
                     string json = wc.DownloadString(Constants.DepressurizerLatestRelease);
 
                     JObject parsedJson = JObject.Parse(json);
-                    githubVersion = new Version(((string) parsedJson.SelectToken("tag_name")).Replace("v", ""));
+                    githubVersion = new Version(((string) parsedJson.SelectToken("tag_name")).Replace("v", string.Empty));
                     url = (string) parsedJson.SelectToken("html_url");
                 }
 

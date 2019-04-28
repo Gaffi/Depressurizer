@@ -201,7 +201,7 @@ namespace Depressurizer
                 return " " + name + GetToggle(val);
             }
 
-            return "";
+            return string.Empty;
         }
 
         private string GetToggle(bool val)

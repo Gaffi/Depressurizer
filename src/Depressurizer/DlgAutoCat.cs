@@ -206,7 +206,7 @@ namespace Depressurizer
             cboFilter.DataSource = ownedGames.Filters;
             cboFilter.ValueMember = null;
             cboFilter.DisplayMember = "Name";
-            cboFilter.Text = "";
+            cboFilter.Text = string.Empty;
         }
 
         private void lstAutoCats_SelectedIndexChanged(object sender, EventArgs e)

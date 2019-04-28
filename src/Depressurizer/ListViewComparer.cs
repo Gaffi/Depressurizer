@@ -62,8 +62,8 @@ namespace Depressurizer
                 return 1;
             }
 
-            string string1 = listViewItem1.SubItems.Count <= ColumnNumber ? "" : listViewItem1.SubItems[ColumnNumber].Text;
-            string string2 = listViewItem2.SubItems.Count <= ColumnNumber ? "" : listViewItem2.SubItems[ColumnNumber].Text;
+            string string1 = listViewItem1.SubItems.Count <= ColumnNumber ? string.Empty : listViewItem1.SubItems[ColumnNumber].Text;
+            string string2 = listViewItem2.SubItems.Count <= ColumnNumber ? string.Empty : listViewItem2.SubItems[ColumnNumber].Text;
 
             int result;
             if (double.TryParse(string1, out double double1) && double.TryParse(string2, out double double2))
