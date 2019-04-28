@@ -15,7 +15,7 @@ namespace Depressurizer
 
         private readonly AutoCat initial;
 
-        //public List<Filter> FilterList;
+        // public List<Filter> FilterList;
         private readonly GameList ownedGames;
 
         private AutoCat current;

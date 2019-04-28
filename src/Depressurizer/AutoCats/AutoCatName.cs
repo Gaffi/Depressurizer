@@ -35,7 +35,7 @@ namespace Depressurizer.AutoCats
             GroupNonEnglishCharactersText = groupNonEnglishCharactersText;
         }
 
-        //XmlSerializer requires a parameterless constructor
+        // XmlSerializer requires a parameterless constructor
         private AutoCatName() { }
 
         #endregion

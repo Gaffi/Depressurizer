@@ -8,7 +8,7 @@ namespace Depressurizer.AutoCats
     {
         #region Fields
 
-        //private List<string> stringAutocats;
+        // private List<string> stringAutocats;
         private readonly List<AutoCat> Autocats;
 
         private AutoCat current;

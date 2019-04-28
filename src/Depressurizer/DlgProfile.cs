@@ -584,7 +584,7 @@ namespace Depressurizer
 
         private void txtUserID_TextChanged(object sender, EventArgs e)
         {
-            //    if( !skipUserClear ) {
+            // if( !skipUserClear ) {
             //        lstUsers.ClearSelected();
             //    }
         }

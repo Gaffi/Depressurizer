@@ -36,7 +36,7 @@ namespace Depressurizer.AutoCats
             clbRemoveSelected.DisplayMember = "text";
             clbAddSelected.DisplayMember = "text";
 
-            //Hide count columns
+            // Hide count columns
             lstRemove.Columns[1].Width = 0;
             lstAdd.Columns[1].Width = 0;
         }

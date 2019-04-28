@@ -268,7 +268,7 @@ namespace Depressurizer
                     AutoCat.GenerateDefaultAutoCatSet(profile.AutoCats);
                 }
 
-                //profile.AutoCats.Sort();
+                // profile.AutoCats.Sort();
             }
 
             Logger.Info(GlobalStrings.MainForm_ProfileLoaded);
@@ -414,7 +414,7 @@ namespace Depressurizer
                 filter.WriteToXml(writer);
             }
 
-            writer.WriteEndElement(); //game filters
+            writer.WriteEndElement(); // game filters
 
             writer.WriteStartElement(XmlNameAutoCatList);
 
@@ -423,7 +423,7 @@ namespace Depressurizer
                 autoCat.WriteToXml(writer);
             }
 
-            writer.WriteEndElement(); //autocats
+            writer.WriteEndElement(); // autocats
 
             writer.WriteStartElement(XmlNameExclusionList);
 

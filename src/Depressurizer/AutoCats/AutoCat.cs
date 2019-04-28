@@ -130,18 +130,18 @@ namespace Depressurizer.AutoCats
                 list = new List<AutoCat>();
             }
 
-            //By Genre
+            // By Genre
             list.Add(new AutoCatGenre(GlobalStrings.Profile_DefaultAutoCatName_Genre, null, "(" + GlobalStrings.Name_Genre + ") "));
 
-            //By Year
+            // By Year
             list.Add(new AutoCatYear(GlobalStrings.Profile_DefaultAutoCatName_Year, null, "(" + GlobalStrings.Name_Year + ") "));
 
-            //By Score
+            // By Score
             AutoCatUserScore ac = new AutoCatUserScore(GlobalStrings.Profile_DefaultAutoCatName_UserScore, null, "(" + GlobalStrings.Name_Score + ") ");
             ac.GenerateSteamRules(ac.Rules);
             list.Add(ac);
 
-            //By Tags
+            // By Tags
             AutoCatTags act = new AutoCatTags(GlobalStrings.Profile_DefaultAutoCatName_Tags, null, "(" + GlobalStrings.Name_Tags + ") ");
             foreach (KeyValuePair<string, float> tag in Database.CalculateSortedTagList(null, 1, 20, 0, false, false))
             {
@@ -150,7 +150,7 @@ namespace Depressurizer.AutoCats
 
             list.Add(act);
 
-            //By Flags
+            // By Flags
             AutoCatFlags acf = new AutoCatFlags(GlobalStrings.Profile_DefaultAutoCatName_Flags, null, "(" + GlobalStrings.Name_Flags + ") ");
             foreach (string flag in Database.AllFlags)
             {
@@ -159,7 +159,7 @@ namespace Depressurizer.AutoCats
 
             list.Add(acf);
 
-            //By HLTB
+            // By HLTB
             AutoCatHltb ach = new AutoCatHltb(GlobalStrings.Profile_DefaultAutoCatName_Hltb, null, "(HLTB) ", false);
             ach.Rules.Add(new HowLongToBeatRule(" 0-5", 0, 5, TimeType.Extras));
             ach.Rules.Add(new HowLongToBeatRule(" 5-10", 5, 10, TimeType.Extras));
@@ -168,7 +168,7 @@ namespace Depressurizer.AutoCats
             ach.Rules.Add(new HowLongToBeatRule("50+", 20, 0, TimeType.Extras));
             list.Add(ach);
 
-            //By Platform
+            // By Platform
             AutoCatPlatform acPlatform = new AutoCatPlatform(GlobalStrings.Profile_DefaultAutoCatName_Platform, null, "(" + GlobalStrings.AutoCat_Name_Platform + ") ", true, true, true, true);
             list.Add(acPlatform);
         }

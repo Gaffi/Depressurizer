@@ -295,7 +295,7 @@ namespace Depressurizer
             }
 
             Language = dbLang;
-            //clean DB from data in wrong language
+            // clean DB from data in wrong language
             foreach (DatabaseEntry g in Values)
             {
                 if (g.Id <= 0)
@@ -307,7 +307,7 @@ namespace Depressurizer
                 g.Flags = null;
                 g.Genres = null;
                 g.SteamReleaseDate = null;
-                g.LastStoreScrape = 1; //pretend it is really old data
+                g.LastStoreScrape = 1; // pretend it is really old data
                 g.VRSupport = new VRSupport();
                 g.LanguageSupport = new LanguageSupport();
             }

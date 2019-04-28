@@ -23,7 +23,7 @@ namespace Depressurizer.AutoCats
         {
             InitializeComponent();
 
-            //initialize combobox
+            // initialize combobox
             cmbTimeType.Items.AddRange(new object[]
             {
                 TimeType.Main,

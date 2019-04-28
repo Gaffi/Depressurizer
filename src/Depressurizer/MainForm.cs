@@ -689,7 +689,7 @@ namespace Depressurizer
                     scrapeJobs.Add(new ScrapeJob(game.Id, game.Id));
                     notInDbCount++;
                 }
-                else if (Database.Contains(game.Id, out DatabaseEntry entry2) && game.Id > 0 && DateTimeOffset.UtcNow.ToUnixTimeSeconds() > entry2.LastStoreScrape + Settings.ScrapePromptDays * 86400) //86400 seconds in a day
+                else if (Database.Contains(game.Id, out DatabaseEntry entry2) && game.Id > 0 && DateTimeOffset.UtcNow.ToUnixTimeSeconds() > entry2.LastStoreScrape + Settings.ScrapePromptDays * 86400) // 86400 seconds in a day
                 {
                     scrapeJobs.Add(new ScrapeJob(entry2.Id, game.Id));
                     oldDbDataCount++;
@@ -1548,7 +1548,7 @@ namespace Depressurizer
             lstCategories.BeginUpdate();
             lstCategories.Items.Clear();
 
-            //calculate number of hidden, VR and uncategorized games
+            // calculate number of hidden, VR and uncategorized games
             int all = 0;
             int hidden = 0;
             int uncategorized = 0;
@@ -1672,7 +1672,7 @@ namespace Depressurizer
                 }
             }
 
-            //if (sort)
+            // if (sort)
             if (lstCategories.ListViewItemSorter == null)
             {
                 lstCategories.ListViewItemSorter = new ListCategoriesComparer(CategorySortMode.Name, SortOrder.Ascending);
@@ -2430,7 +2430,7 @@ namespace Depressurizer
                 return Database.Contains(gameInfo.Id, out DatabaseEntry entry) ? entry.HltbCompletionists : 0;
             };
 
-            //Aspect to String Converters
+            // Aspect to String Converters
             colNumberOfReviews.AspectToStringConverter = delegate(object obj)
             {
                 int reviewTotal = (int) obj;
@@ -2530,7 +2530,7 @@ namespace Depressurizer
                 return lastPlayed == DateTime.MinValue ? null : lastPlayed.ToString(format, CultureInfo.CurrentCulture);
             };
 
-            //Filtering
+            // Filtering
             colCategories.ClusteringStrategy = new CommaClusteringStrategy();
             colGenres.ClusteringStrategy = new CommaClusteringStrategy();
             colFlags.ClusteringStrategy = new CommaClusteringStrategy();
@@ -2552,7 +2552,7 @@ namespace Depressurizer
                 return ShouldDisplayGame(gameInfo);
             });
 
-            //Formating
+            // Formating
             lstGames.RowFormatter = delegate(OLVListItem lvi)
             {
                 if (lvi.RowObject != null && ((GameInfo) lvi.RowObject).Id < 0)
@@ -2882,7 +2882,7 @@ namespace Depressurizer
                     ReferenceCorner = ContentAlignment.TopLeft,
                     Transparency = 255
                 };
-                //e.SubItem.Decoration = decoration;
+                // e.SubItem.Decoration = decoration;
                 e.SubItem.Decorations.Add(decoration);
             }
             catch
@@ -3176,7 +3176,7 @@ namespace Depressurizer
 
         private void mbtnAutoCategorize_Click(object sender, EventArgs e)
         {
-            //AutoCat ac = cmbAutoCatType.SelectedItem as AutoCat;
+            // AutoCat ac = cmbAutoCatType.SelectedItem as AutoCat;
             if (lvAutoCatType.CheckedItems.Count == 0)
             {
                 ClearStatus();
@@ -3200,7 +3200,7 @@ namespace Depressurizer
                         autoCats.Add(ac);
                     }
 
-                    //RunAutoCats(currentProfile.AutoCats);  WILL THIS WORK?  ARE AUTOCATS SELECTED VALUES SET CORRECTLY
+                    // RunAutoCats(currentProfile.AutoCats);  WILL THIS WORK?  ARE AUTOCATS SELECTED VALUES SET CORRECTLY
                     RunAutoCats(autoCats, true);
                     RemoveEmptyCats();
                     FilterGameList(true);
@@ -4533,7 +4533,7 @@ namespace Depressurizer
 
                     AddGameToMultiCatCheckStates(gameInfo, first);
                     AddRemoveCategoryContextMenu(gameInfo);
-                    //AddGameToCheckboxStates(game, first);
+                    // AddGameToCheckboxStates(game, first);
                     first = false;
                 }
 
@@ -4669,7 +4669,7 @@ namespace Depressurizer
 
             Text = sb.ToString();
 
-            //update Avatar picture for new profile
+            // update Avatar picture for new profile
             if (CurrentProfile != null)
             {
                 picAvatar.Image = CurrentProfile.Avatar;

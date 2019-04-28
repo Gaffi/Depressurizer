@@ -585,20 +585,20 @@ namespace Depressurizer.Core.Models
                     string language = WebUtility.HtmlDecode(ma.Groups[1].Value.Trim());
                     if (language.StartsWith("#lang") || language.StartsWith("("))
                     {
-                        continue; //Some store pages on steam are bugged.
+                        continue; // Some store pages on steam are bugged.
                     }
 
-                    if (WebUtility.HtmlDecode(ma.Groups[2].Value.Trim()) != string.Empty) //Interface
+                    if (WebUtility.HtmlDecode(ma.Groups[2].Value.Trim()) != string.Empty) // Interface
                     {
                         LanguageSupport.Interface.Add(language);
                     }
 
-                    if (WebUtility.HtmlDecode(ma.Groups[3].Value.Trim()) != string.Empty) //Full Audio
+                    if (WebUtility.HtmlDecode(ma.Groups[3].Value.Trim()) != string.Empty) // Full Audio
                     {
                         LanguageSupport.FullAudio.Add(language);
                     }
 
-                    if (WebUtility.HtmlDecode(ma.Groups[4].Value.Trim()) != string.Empty) //Subtitles
+                    if (WebUtility.HtmlDecode(ma.Groups[4].Value.Trim()) != string.Empty) // Subtitles
                     {
                         LanguageSupport.Subtitles.Add(language);
                     }

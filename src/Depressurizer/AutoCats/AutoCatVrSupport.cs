@@ -51,7 +51,7 @@ namespace Depressurizer.AutoCats
             Selected = other.Selected;
         }
 
-        //XmlSerializer requires a parameterless constructor
+        // XmlSerializer requires a parameterless constructor
         private AutoCatVrSupport() { }
 
         #endregion
