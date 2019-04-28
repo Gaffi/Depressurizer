@@ -60,7 +60,7 @@ namespace Depressurizer.Core.Models
         public AppType AppType { get; set; } = AppType.Unknown;
 
         /// <summary>
-        ///     Steam Application ID.
+        ///     Gets or sets the Steam Application ID.
         /// </summary>
         public int Id { get; set; }
 

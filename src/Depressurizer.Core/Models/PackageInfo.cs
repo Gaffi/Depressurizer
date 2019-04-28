@@ -50,15 +50,15 @@ namespace Depressurizer.Core.Models
 
             /* packageinfo.vdf entry example format, sometimes has extra values. Line breaks are only for readability and not part of format.
             * we only care about *packageid*, *billingtype*, *appids*
-            * *undeciphered*(24 bytes i haven't deciphered) *changenumber*(4 bytes, little endian) 
+            * *undeciphered*(24 bytes i haven't deciphered) *changenumber*(4 bytes, little endian)
             * 00 *packageid*(variable size, big endian, ascii) 00
-            * 02 packageid 00 *packageid*(4 bytes, little endian) 
-            * 02 billingtype 00 *billingtype*(4 bytes, little endian) 
-            * 02 licensetype 00 *licensetype*(4 bytes, little endian) 
-            * 02 status 00 00 00 00 00 00 extended 00 
-            * 08 00 appids 00 02 *entrynumber*(variable size, number stored as string(ascii), starts at 0, random example: 31 38 39=189) 00 *appid*(4 bytes, little endian) 
-            * 08 00 depotids 00 02 *entrynumber* 00 *depotid*(4 bytes, little endian) 02 *entrynumber* 00 *depotid* 02 *entrynumber* 00 *depotid* 
-            * 08 00 appitems 00 08 08 08 
+            * 02 packageid 00 *packageid*(4 bytes, little endian)
+            * 02 billingtype 00 *billingtype*(4 bytes, little endian)
+            * 02 licensetype 00 *licensetype*(4 bytes, little endian)
+            * 02 status 00 00 00 00 00 00 extended 00
+            * 08 00 appids 00 02 *entrynumber*(variable size, number stored as string(ascii), starts at 0, random example: 31 38 39=189) 00 *appid*(4 bytes, little endian)
+            * 08 00 depotids 00 02 *entrynumber* 00 *depotid*(4 bytes, little endian) 02 *entrynumber* 00 *depotid* 02 *entrynumber* 00 *depotid*
+            * 08 00 appitems 00 08 08 08
             */
 
             BinaryReader bReader = new BinaryReader(new FileStream(path, FileMode.Open), Encoding.ASCII);

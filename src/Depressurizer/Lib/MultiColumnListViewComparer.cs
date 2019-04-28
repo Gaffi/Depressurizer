@@ -90,7 +90,7 @@ namespace Depressurizer
 
             public IntPtr hbm;
 
-            // _WIN32_IE >= 0x0300 
+            // _WIN32_IE >= 0x0300
             public int iImage;
 
             public int iOrder;
